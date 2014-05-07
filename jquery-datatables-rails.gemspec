@@ -17,9 +17,9 @@ Gem::Specification.new do |s|
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
   s.require_paths = ["lib"]
 
-  s.add_dependency 'jquery-rails', '~> 0'
+  s.add_dependency 'jquery-rails', '>= 0'
 
-  s.add_dependency 'sass-rails', '~> 0'
+  s.add_dependency 'sass-rails', '>= 0'
 end
 
 
