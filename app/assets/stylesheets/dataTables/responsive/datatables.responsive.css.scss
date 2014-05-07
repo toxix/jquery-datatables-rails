@@ -1,11 +1,16 @@
+/*
+*= depend_on_asset "dataTables/responsive/minus.png"
+*= depend_on_asset "dataTables/responsive/plus.png"
+*/
+
 table.has-columns-hidden > tbody > tr > td > span.responsiveExpander {
-    background: image-url('dataTables/plus.png') no-repeat 5px center;
+    background: image-url('dataTables/responsive/plus.png') no-repeat 5px center;
     padding-left: 32px;
     cursor: pointer;
 }
 
 table.has-columns-hidden > tbody > tr.detail-show > td span.responsiveExpander {
-    background: image-url('dataTables/minus.png') no-repeat 5px center;
+    background: image-url('dataTables/responsive/minus.png') no-repeat 5px center;
 }
 
 table.has-columns-hidden > tbody > tr.row-detail > td {
