@@ -26,16 +26,23 @@ It provides all the basic DataTables files, and a few of the extras.
 
         *= require dataTables/jquery.dataTables
 
+## Upgrading from version before 1.12.2
+All file names has changed for beeing compatible with the current DataTables project (v 1.10.). Please update the path to the files in your `application.js` and `application.css`. The new paths for bootstrap can be found below.
+If you want to use the old dataTables (v.1.9.4) plese don't upgrade behind version 1.12.2. so your Gemfile contain this:
+  ```
+  gem 'jquery-datatables-rails', '~> 1.12.2'
+  ```
+
 ## Twitter Bootstrap 2 Installation
 
 1. Complete steps 1-3 of the General Installation
 1. Add some more JavaScript to `application.js`:
 
-        //= require dataTables/jquery.dataTables.bootstrap
+        //= require dataTables/bootstrap/2/dataTables.bootstrap
 
 1. Add this (and only this) stylesheet to `application.css`:
 
-        *= require dataTables/jquery.dataTables.bootstrap
+        *= require dataTables/bootstrap/2/jquery.dataTables.bootstrap
 
 1. Initialize your datatables using one of these options:
 
@@ -60,11 +67,12 @@ $('.datatable').dataTable({
 1. Complete steps 1-3 of the General Installation
 1. Add some more JavaScript to `application.js`:
 
-        //= require dataTables/jquery.dataTables.bootstrap3
+        //= require dataTables/bootstrap/3/dataTables.bootstrap
+
 
 1. Add this (and only this) stylesheet to `application.css`:
 
-        *= require dataTables/jquery.dataTables.bootstrap3
+        *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
 
 1. Initialize your datatables using these option:
 
@@ -81,11 +89,11 @@ $('.datatable').dataTable({
 
 1. Add some more JavaScript to `application.js`:
 
-        //= require dataTables/jquery.dataTables.foundation
+        //= require dataTables/foundation/dataTables.foundation
 
 1. Add this (and only this) stylesheet to `application.css`:
 
-        *= require dataTables/jquery.dataTables.foundation
+        *= require dataTables/foundation/dataTables.foundation
 
 1. Initialize your datatables using these option:
 
@@ -106,13 +114,13 @@ $('.datatable').dataTable({
 
 1. Add some more JavaScript to `application.js`:
 
-        //= require dataTables/jquery.dataTables.bootstrap3
-        //= require dataTables/jquery.dataTables.responsive
+        //= require dataTables/bootstrap/3/dataTables.bootstrap
+        //= require dataTables/responsive/datatables.responsive
 
 1. Add this (and only this) stylesheet to `application.css`:
 
-        *= require dataTables/jquery.dataTables.bootstrap3
-        *= require dataTables/jquery.dataTables.responsive
+        *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
+        *= require dataTables/responsive/datatables.responsive.css
 
 1. Initialize your datatables using:
 
@@ -173,17 +181,17 @@ Only the official extras are available:
 
 To add an extra into your application, add its JS file to `application.js` using the following pattern:
 
-    //= require dataTables/extras/[ExtraName]
+    //= require dataTables/extras/dataTables.[ExtraName]
 
 Additionally, you may need to add any associated CSS files. For instance the TableTools extra requires
 you to add the following two lines to your `application.css` file:
 
-    *= require dataTables/extras/TableTools
-    *= require dataTables/extras/TableTools_JUI
+    *= require dataTables/extras/dataTables.TableTools
+    *= require dataTables/extras/dataTables.TableTools_JUI
 
 TableTools also requires this to be included in 'application.js':
 
-    //= require dataTables/extras/ZeroClipboard.js
+    //= require dataTables/extras/dataTables.ZeroClipboard.js
 
 Make sure to also add it's initialization as described on [datatables extras' site][datatables_extras]
 
