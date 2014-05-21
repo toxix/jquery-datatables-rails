@@ -119,8 +119,8 @@ $('.datatable').dataTable({
 
 1. Add this (and only this) stylesheet to `application.css`:
 
-        *= require dataTables/bootstrap/3/jquery.dataTables.bootstrap
-        *= require dataTables/responsive/datatables.responsive.css
+        *= require dataTables/bootstrap/3/dataTables.bootstrap
+        *= require dataTables/responsive/datatables.responsive
 
 1. Initialize your datatables using:
 
